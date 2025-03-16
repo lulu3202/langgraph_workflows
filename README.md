@@ -1,9 +1,7 @@
-# Blog Evaluator
+# Blog Generation App with Evaluator-Optimizer Workflow
 
 ![alt text](image.png)
 ![alt text](image-1.png)
-
-# Blog Generation Workflow
 
 ## Overview
 This project implements an **Evaluator-Optimizer Workflow** using **LangGraph** and **LangChain** to generate and refine short blogs. The workflow follows an iterative process where an LLM generates a blog, evaluates it against predefined criteria, and either accepts it or provides feedback for revision. This ensures that the final output meets quality standards.
@@ -32,11 +30,7 @@ graph TD;
   - If the blog **needs revision**, feedback is given, and a new version is generated.
 
 ## Setup & Usage
-
 ### Install dependencies:
-```bash
-pip install langchain_groq langgraph pydantic python-dotenv
-```
 
 ### Set environment variables in a `.env` file:
 ```env
@@ -45,18 +39,13 @@ LANGCHAIN_API_KEY=your_langchain_api_key
 ```
 
 ### Run the script in an IDE or Jupyter Notebook:
-```python
-state = optimizer_workflow.invoke({"topic": "MCP from Anthropic"})
-print(state["blog"])
-```
 
 ## Testing in LangSmith Studio
 - Deploy the workflow and **provide only the topic** as input.
 - Monitor execution flow and **validate outputs** by logging into your LangSmith account (Adding @traceable to your function helps track it)
-- You can also test via Langraph dev (ensure you have the langgraph.json file for this)
+- You can also test via "Langraph dev" command on your console which will open up Studio for enhanced debugging (ensure you have the langgraph.json file for this and customize it for your project)
 
-
-# Parallelized Code Review with LLMs
+# Code Review App with Parallelization Workflow
 ![alt text](image-2.png)
 
 ## Introduction
@@ -81,14 +70,6 @@ This project demonstrates a **parallelized workflow** for **automated code revie
    - Best practices adherence
 3. The results from these processes are aggregated into a final feedback report.
 
-## Technologies Used
-- **Python**
-- **LangChain** (LLM-based workflow automation)
-- **LangGraph** (Parallel execution of LLM tasks)
-- **Groq API** (LLM inference)
-- **Pydantic & TypedDict** (Data validation)
-- **Dotenv & OS** (Environment variable management)
-
 ## Running the Code
 1. Clone this repository:
   
@@ -100,14 +81,12 @@ This project demonstrates a **parallelized workflow** for **automated code revie
 
 4. Run the script
  
-
 ## Testing in LangSmith Studio
 - Deploy the workflow and **provide only the topic** as input.
 - Monitor execution flow and **validate outputs** by logging into your LangSmith account (Adding @traceable to your function helps track it)
-- You can also test via Langraph dev (ensure you have the langgraph.json file for this)
+- You can also test via "Langraph dev" (ensure you have the langgraph.json file for this)
 
-
-# Learning Path Generator
+# Learning Path Generator App with Orchestrator-Synthesizer Workflow
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 
@@ -145,7 +124,6 @@ The workflow consists of three key components:
 
 ## Running the Workflow
 To generate a personalized learning path, the workflow takes the following inputs:
-
 ```python
 user_skills = "Python programming, basic machine learning concepts"
 user_goals = "Learn advanced AI, master prompt engineering, and build AI applications"
@@ -153,10 +131,5 @@ user_goals = "Learn advanced AI, master prompt engineering, and build AI applica
 
 It then executes the **Orchestrator → Workers → Synthesizer** pipeline, producing a structured learning roadmap.
 
-## Future Enhancements
-- **Incorporate user feedback loops** to refine study plans over time.
-- **Add multimodal learning resources** (e.g., videos, interactive exercises).
-- **Expand to different learning domains** beyond AI and machine learning.
----
 
 

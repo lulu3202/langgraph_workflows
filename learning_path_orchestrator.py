@@ -19,10 +19,7 @@ os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 # Initialize LLM model
 llm = ChatGroq(model="qwen-2.5-32b")
 
-# ----------------------------
-# 1️⃣ Define Custom Data Structures
-# ----------------------------
-
+# Define Custom Data structures
 class Topic(BaseModel):
     """Represents a learning topic with a name and description."""
     name: str = Field(description="Name of the learning topic.")
@@ -48,10 +45,7 @@ class WorkerState(TypedDict):
     topic: Topic
     completed_topics: List[str]
 
-# ----------------------------
-# 2️⃣ Define Core Processing Functions
-# ----------------------------
-
+# Define Node Functions
 @traceable
 def orchestrator(state: State):
     """Creates a study plan based on user skills and goals."""
@@ -97,18 +91,16 @@ def synthesizer(state: State):
 
     return {"learning_roadmap": learning_roadmap}  # Returns final roadmap
 
-# ----------------------------
-# 3️⃣ Define Conditional Edge Function (Before Using It)
-# ----------------------------
+
+# Define Conditional Edge Function 
 
 def assign_workers(state: State):
     """Assigns a worker (llm_call) to each topic in the plan."""
     
     return [Send("llm_call", {"topic": t}) for t in state["topics"]]  # Creates worker tasks
 
-# ----------------------------
-# 4️⃣ Build Workflow
-# ----------------------------
+
+# Build Workflow
 
 learning_path_builder = StateGraph(State)
 

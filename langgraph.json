@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "learning_path_workflow": "./learning_path_orchestrator.py:learning_path_workflow"
+  },
+  "env": "../.env"
+}
+
