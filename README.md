@@ -1,7 +1,11 @@
+# To run STREAMLIT app with the consolidated workflows
+- ``streamlit run app7.py``
+- Individual workflow Python files are listed in the following sections. 
+
 # Blog Generation App with Evaluator-Optimizer Workflow
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](assets/image.png)
+![alt text](assets/image-1.png)
 
 ## Overview
 This project implements an **Evaluator-Optimizer Workflow** using **LangGraph** and **LangChain** to generate and refine short blogs. The workflow follows an iterative process where an LLM generates a blog, evaluates it against predefined criteria, and either accepts it or provides feedback for revision. This ensures that the final output meets quality standards.
@@ -46,7 +50,7 @@ LANGCHAIN_API_KEY=your_langchain_api_key
 - You can also test via "Langraph dev" command on your console which will open up Studio for enhanced debugging (ensure you have the langgraph.json file for this and customize it for your project)
 
 # Code Review App with Parallelization Workflow
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ## Introduction
 This project demonstrates a **parallelized workflow** for **automated code review** using **large language models (LLMs)**. Instead of running feedback checks sequentially, the system executes multiple review processes **in parallel**, making it an **efficient and scalable** solution for code assessment.
@@ -87,8 +91,8 @@ This project demonstrates a **parallelized workflow** for **automated code revie
 - You can also test via "Langraph dev" (ensure you have the langgraph.json file for this)
 
 # Learning Path Generator App with Orchestrator-Synthesizer Workflow
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](assets/image-3.png)
+![alt text](assets/image-4.png)
 
 ## Overview
 This project implements an **Orchestrator-Synthesizer** workflow to dynamically generate a personalized **learning roadmap** based on a user's existing skills and learning goals. It uses **LangChain, LangGraph, and Groq AI models** to generate structured study plans and topic summaries.
