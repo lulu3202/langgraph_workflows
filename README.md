@@ -1,3 +1,15 @@
+---
+title: LanggraphWorkflows
+emoji: 🐨
+colorFrom: blue
+colorTo: red
+sdk: streamlit
+sdk_version: 1.42.0
+app_file: app7.py
+pinned: false
+---
+
+
 # To run STREAMLIT app with the consolidated workflows
 - ``streamlit run app7.py``
 - Individual workflow Python files are listed in the following sections. 
