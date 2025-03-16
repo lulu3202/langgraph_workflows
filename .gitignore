@@ -1,0 +1,4 @@
+venv/
+leave/
+.env
+.DS_Store
