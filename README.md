@@ -12,7 +12,10 @@ pinned: false
 
 # To run STREAMLIT app with the consolidated workflows
 - ``streamlit run app7.py``
-- Individual workflow Python files are listed in the following sections. 
+- Individual workflow Python files are listed in the following sections
+- ⚠️ Please enter your GROQ API key to proceed. Don't have? refer : https://console.groq.com/keys
+
+## You can view the deployed apps here: https://huggingface.co/spaces/Deepri24/LangGraph_Workflows 
 
 # Blog Generation App with Evaluator-Optimizer Workflow
 
