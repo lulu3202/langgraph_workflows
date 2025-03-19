@@ -141,4 +141,4 @@ user_goals = "Learn advanced AI, master prompt engineering, and build AI applica
 It then executes the **Orchestrator → Workers → Synthesizer** pipeline, producing a structured learning roadmap.
 
 
-
+You can also read my blog post here: https://medium.com/towards-artificial-intelligence/building-agentic-ai-apps-using-langgraph-pydantic-streamlit-groq-f3c535cc553d
