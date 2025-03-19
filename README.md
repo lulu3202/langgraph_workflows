@@ -23,6 +23,7 @@ Note: These scripts utilize LangGraph Studio to debug workflows.
 ## Streamlit Application
 
 * **`app7.py`**: A Streamlit interface that integrates the use cases from the above scripts, providing a user-friendly way to interact with them. Run using: `streamlit run app7.py`
+![alt text](agentic-ai.png)
 
 ## Usage
 
